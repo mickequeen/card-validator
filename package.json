@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/cynthia1171/card-validator#readme",
   "dependencies": {
+    "jquery": "^3.3.0",
     "materialize-css": "^0.100.2"
-  }
+  },
+  "devDependencies": {}
 }
