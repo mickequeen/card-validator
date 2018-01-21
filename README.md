@@ -23,9 +23,9 @@ El ambiente de desarrollo del proyecto se formará con los siguientes componente
 
 ### Ejemplo
 
-![Validador](http://drive.google.com/uc?export=view&id=1aG2n-ngG_BMFNHVnn9viVQrOC-gI8com/view?usp=sharing)
+![Validador](http://drive.google.com/uc?export=view&id=1aG2n-ngG_BMFNHVnn9viVQrOC-gI8com)
 
-![Tarjeta válida](http://drive.google.com/uc?export=view&id=1i7yX97wjcx0-siusTrYdGbGfDqH9KBoe/view?usp=sharing)
+![Tarjeta válida](http://drive.google.com/uc?export=view&id=1i7yX97wjcx0-siusTrYdGbGfDqH9KBoe)
 
-![Tarjeta inválida](http://drive.google.com/uc?export=view&id=1mwA91zDktgfcNVeTl_sv1Ldvcscau-7a/view?usp=sharing)
+![Tarjeta inválida](http://drive.google.com/uc?export=view&id=1mwA91zDktgfcNVeTl_sv1Ldvcscau-7a)
 
