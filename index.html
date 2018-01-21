@@ -12,7 +12,7 @@
   <header>
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo center">Validate Your Credit Card</a>
+        <a href="#" class="brand-logo center">Validador tarjetas de crédito</a>
       </div>
     </nav>
   </header>
@@ -22,8 +22,13 @@
         <div class="col s8 offset-s2">
           <p>Favor ingrese número de tarjeta para su validación</p>
           <div class="input-field col s12">
-            <input id="creditCard" type="number" class="validate">
+            <input id="creditCard" type="text" class="validate">
             <label id="status" for="creditCard">Credit Card Number</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="exp" name="exp" placeholder="Fecha de expiración" />
+            <input id="cvv" name="cvv" placeholder="CVV" />
+            <input id="name" name="name" placeholder="Nombre completo" />
           </div>
         </div>
       </div>
