@@ -1,13 +1,20 @@
+var validaNum = /^\d*$/;
+
 $(document).ready(function() {
-/*
-*validar que sólo ingresen 16 dígitos
-*/
+  /*
+  *validar que sólo ingresen 16 dígitos
+  */
   $('#creditCard').keyup(function() {
     if ($('#creditCard').val().length < 16) {
       $('#creditCard').attr('class', 'invalid');
       $('#status').attr('data-error', 'Favor ingrese 16 dígitos');
-    } if ($('#creditCard').val().length === 16) {
+    }
+    if ($('#creditCard').val().length === 16) {
       validCard();
+    }
+    
+    if ($('#creditCard').val() === '' || $('#creditCard').val().search(validaNum)) {
+      alert('solo puede ingresar numeros');
     }
   });
   /*
@@ -34,7 +41,7 @@ $(document).ready(function() {
     }
     var pairTogether = pairToSum.join('').split('');
     var pairAndImpair = pairTogether.concat(impairToSum);
-    for (var y = 0; y < pairAndImpair.length; y++) {
+    for (y = 0; y < pairAndImpair.length; y++) {
       /*
       *ingresar a variable y sumar cada dígito
       */
