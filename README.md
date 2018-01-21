@@ -23,9 +23,9 @@ El ambiente de desarrollo del proyecto se formará con los siguientes componente
 
 ### Ejemplo
 
-![Validador](https://ibb.co/mFMe6w)
+![Validador](https://drive.google.com/file/d/1aG2n-ngG_BMFNHVnn9viVQrOC-gI8com/view?usp=sharing)
 
-![Tarjeta válida](https://ibb.co/iJprmw)
+![Tarjeta válida](https://drive.google.com/file/d/1i7yX97wjcx0-siusTrYdGbGfDqH9KBoe/view?usp=sharing)
 
-![Tarjeta inválida](https://ibb.co/nshBmw)
+![Tarjeta inválida](https://drive.google.com/file/d/1mwA91zDktgfcNVeTl_sv1Ldvcscau-7a/view?usp=sharing)
 
