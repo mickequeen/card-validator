@@ -9,8 +9,26 @@
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-  
-
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Validate Your Credit Card</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col s8 offset-s2">
+          <p>Favor ingrese número de tarjeta para su validación</p>
+          <div class="input-field col s12">
+            <input id="creditCard" type="number" class="validate">
+            <label id="status" for="creditCard">Credit Card Number</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
   <script src="assets/js/app.js"></script>
