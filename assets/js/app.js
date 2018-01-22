@@ -13,7 +13,7 @@ $(document).ready(function() {
       validCard();
     }
     
-    if ($('#creditCard').val() === '' || $('#creditCard').val().search(validaNum)) {
+    if ($('#creditCard').val().search(validaNum)) {
       alert('solo puede ingresar numeros');
     }
   });

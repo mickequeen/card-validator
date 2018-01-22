@@ -4,7 +4,7 @@
   "description": "Validador de tarjetas de crédito por medio del algoritmo de Luhn\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[A\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,11 @@
   "homepage": "https://github.com/cynthia1171/card-validator#readme",
   "dependencies": {
     "jquery": "^3.3.0",
-    "materialize-css": "^0.100.2"
-  },
-  "devDependencies": {}
+    "materialize-css": "^0.100.2",
+    "mocha": "^5.0.0",
+    "chai": "^4.1.2",
+    "eslint": "^4.15.0",
+    "eslint-config-google": "^0.9.1"
+
+  }
 }
