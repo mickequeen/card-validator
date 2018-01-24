@@ -18,8 +18,9 @@ El ambiente de desarrollo del proyecto se formará con los siguientes componente
 - Babel v.6.26.0
 - Eslint 
 - Materialize-css
-- .gitignore, oculta archivos en github
-- npm init
+- NPM
+- Mocha v.5.0.0
+- Chai v.4.1.2
 
 ### Ejemplo
 
