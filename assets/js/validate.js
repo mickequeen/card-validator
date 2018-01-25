@@ -1,12 +1,39 @@
-var validaNum = /^\d*$/;
 
 $(document).ready(function() {
   /*
-  *validar que sólo ingresen 16 dígitos
+  *validar tipo de dato ingresado en campo de TC
+  */
+  const validaNum = /^\d*$/;
+
+  $('#creditCard').keyup(function() {
+    if (validaNum.test($('#creditCard').val()) === false) {
+      $('#creditCard').attr('class', 'invalid');
+      $('#status').attr('data-error', 'Favor ingrese sólo dígitos');
+    } else {
+      $('#creditCard').removeAttr('class', 'invalid');
+      $('#status').removeAttr('data-error', 'Favor ingrese sólo dígitos');
+    }
+  });
+  /*
+  *valida prefijo por cada tipo de tarjeta y largo de éstass
   */
   $('#creditCard').keyup(function() {
-    if ($('#creditCard').val().length < 16) {
-      $('#creditCard').attr('class', 'invalid');
+    var prefijo = $('#creditCard').val().charAt(0) + $('#creditCard').val().charAt(1);
+    if (prefijo >= 51 && prefijo <= 55) {
+      if ($('#creditCard').val().length === 16) {
+        validCard();
+      }
+    } if (prefijo == 34 || prefijo == 37) {
+      if ($('#creditCard').val().length === 15) {
+        validCard();
+      }
+    } if (prefijo >= 40 && prefijo <= 49) {
+      if ($('#creditCard').val().length === 13 || $('#creditCard').val().length === 16) {
+        validCard();
+      }
+    }
+  });
+    /*;
       $('#status').attr('data-error', 'Favor ingrese 16 dígitos');
     }
     if ($('#creditCard').val().length === 16) {
@@ -16,7 +43,7 @@ $(document).ready(function() {
     if ($('#creditCard').val().search(validaNum)) {
       alert('solo puede ingresar numeros');
     }
-  });
+  });*/
   /*
   *validar tarjeta
   */
