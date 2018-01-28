@@ -4,7 +4,7 @@
   "description": "Validador de tarjetas de crédito por medio del algoritmo de Luhn\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[A\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha test --reporter nyan"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,5 @@
     "chai": "^4.1.2",
     "eslint": "^4.15.0",
     "eslint-config-google": "^0.9.1"
-
   }
 }
