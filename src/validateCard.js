@@ -74,7 +74,7 @@ CARD.validLuhn = (numcard) => {
 
 /* Función para validar si el tipo de dato es correcto */
 CARD.validateCvv = (cvv) => {
-  if(cvv === '' || cvv.search(validNum)) {
+  if (cvv === '' || cvv.search(validNum)) {
     return false;
   } else {
     return true;
@@ -83,12 +83,53 @@ CARD.validateCvv = (cvv) => {
 
 /* Función para validar el largo según tipo de tarjeta */
 CARD.LengthCvv = (cvv) => {
-  if(cvv.length == 3){
+  if (cvv.length === 3) {
     return 'visa/mastercard';
-  } else if(cvv.length === 4) {
+  } else if (cvv.length === 4) {
     return 'amex';
-  } else if(cvv.length < 3 || cvv.length > 4 || cvv.length === '') {
+  } else if (cvv.length < 3 || cvv.length > 4 || cvv.length === '') {
     return 'cvv inválido';
+  }
+};
+
+/**
+ * Funciones para validar fecha de expiración de la tarjeta
+ */
+/* Función para validar el tipo de dato */
+CARD.validTypeDataDate = (dateExp) => {
+  var ExpReg = new RegExp("(((0[123456789]|10|11|12)/(([1][9][0-9][0-9])|([2][0-9][0-9][0-9]))))");
+  if (ExpReg.test(dateExp)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+/* función para validar si la fecha ingresada es mayor a la fecha actual */
+CARD.validateDate = (dateExp) => {
+  let hoy = new Date();
+  let mm = hoy.getMonth() + 1;
+  let yyyy = hoy.getFullYear();
+  if (mm < 10) {
+    mm = '0' + mm;
+  } 
+  hoy = mm + '/' + yyyy;
+  if (dateExp >= hoy) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+/**
+ * Funciones para validar que el nombre del titular sea correcto
+ */
+
+CARD.validateName = (name) => {
+  if(name.search(validNum)){
+    return true;
+  } else {
+    return false;
   }
 };
 

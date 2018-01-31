@@ -41,3 +41,23 @@ describe('Validar cvv', () => {
     chai.assert.equal(validate.LengthCvv(''), 'cvv inválido');
   });
 });
+
+/* Test para validar fecha de expiración */
+describe('Validar fecha de expiración', () => {
+  it('Validar el tipo de dato', () => {
+    chai.assert.equal(validate.validTypeDataDate('12/asd'), false);
+    chai.assert.equal(validate.validTypeDataDate('05/2018'), true);
+  });
+  it('Validar según la fecha actual', () => {
+    chai.assert.equal(validate.validateDate('02/2018'), true);
+    chai.assert.equal(validate.validateDate('01/2017'), false);
+  });
+});
+
+/* Test para validar el nombre del titular */
+describe('Validar nombre del titular', () => {
+  it('Validar el tipo de dato ingresado', () => {
+    chai.assert.equal(validate.validateName('Pepito Reyes'), true);
+    chai.assert.equal(validate.validateName('123456'), false);
+  });
+});
