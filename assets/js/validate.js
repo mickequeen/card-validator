@@ -18,7 +18,7 @@ $(document).ready(function() {
   *valida prefijo por cada tipo de tarjeta y largo de éstass
   */
   $('#creditCard').keyup(function() {
-    var prefijo = $('#creditCard').val().charAt(0) + $('#creditCard').val().charAt(1);
+    let prefijo = $('#creditCard').val().charAt(0) + $('#creditCard').val().charAt(1);
     if (prefijo >= 51 && prefijo <= 55) {
       if ($('#creditCard').val().length === 16) {
         validCard();
@@ -33,36 +33,24 @@ $(document).ready(function() {
       }
     }
   });
-    /*;
-      $('#status').attr('data-error', 'Favor ingrese 16 dígitos');
-    }
-    if ($('#creditCard').val().length === 16) {
-      validCard();
-    }
-    
-    if ($('#creditCard').val().search(validaNum)) {
-      alert('solo puede ingresar numeros');
-    }
-  });*/
   /*
   *validar tarjeta
   */
   function validCard() {
-    var arr = [];
-    var creditCardNum = $('#creditCard').val();
-    var reverseCreditCard = arr.reverse();
-    var pairToSum = [];
-    var impairToSum = [];
-    var finalSum = [];
-    for (var i = 0; i < creditCardNum.length; i++) {
-      arr.push(parseInt(creditCardNum[i]));
-    }
-    var contPair = 1;
-    for (var x = 0 ; x < reverseCreditCard.length ; x++) {
-      if (contPair % 2 === 0) {
-        pairToSum.push(reverseCreditCard[x] * 2);
+    var intCreditCard = [];
+    let reverse = [...$('#creditCard').val()].reverse();
+    let pairToSum = [];
+    let impairToSum = [];
+    let finalSum = [];
+    reverse.forEach(function(num){
+      intCreditCard.push(parseInt(num))
+    });
+    var contPair = 0;
+    for (var i = 0 ; i < intCreditCard.length ; i++) {
+      if (contPair % 2 !== 0) {
+        pairToSum.push(intCreditCard[i] * 2);
       } else {
-        impairToSum.push(reverseCreditCard[x]);
+        impairToSum.push(intCreditCard[i]);
       }
       contPair++;
     }
