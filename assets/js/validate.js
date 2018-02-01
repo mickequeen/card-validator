@@ -33,36 +33,24 @@ $(document).ready(function() {
       }
     }
   });
-    /*;
-      $('#status').attr('data-error', 'Favor ingrese 16 dígitos');
-    }
-    if ($('#creditCard').val().length === 16) {
-      validCard();
-    }
-    
-    if ($('#creditCard').val().search(validaNum)) {
-      alert('solo puede ingresar numeros');
-    }
-  });*/
   /*
   *validar tarjeta
   */
   function validCard() {
-    let arr = [];
-    let creditCardNum = $('#creditCard').val();
-    let reverseCreditCard = arr.reverse();
+    var intCreditCard = [];
+    let reverse = [...$('#creditCard').val()].reverse();
     let pairToSum = [];
     let impairToSum = [];
     let finalSum = [];
-    for (var i = 0; i < creditCardNum.length; i++) {
-      arr.push(parseInt(creditCardNum[i]));
-    }
-    var contPair = 1;
-    for (var x = 0 ; x < reverseCreditCard.length ; x++) {
-      if (contPair % 2 === 0) {
-        pairToSum.push(reverseCreditCard[x] * 2);
+    reverse.forEach(function(num){
+      intCreditCard.push(parseInt(num))
+    });
+    var contPair = 0;
+    for (var i = 0 ; i < intCreditCard.length ; i++) {
+      if (contPair % 2 !== 0) {
+        pairToSum.push(intCreditCard[i] * 2);
       } else {
-        impairToSum.push(reverseCreditCard[x]);
+        impairToSum.push(intCreditCard[i]);
       }
       contPair++;
     }

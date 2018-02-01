@@ -97,7 +97,7 @@ CARD.LengthCvv = (cvv) => {
  */
 /* Función para validar el tipo de dato */
 CARD.validTypeDataDate = (dateExp) => {
-  var ExpReg = new RegExp("(((0[123456789]|10|11|12)/(([1][9][0-9][0-9])|([2][0-9][0-9][0-9]))))");
+  let ExpReg = new RegExp("(((0[123456789]|10|11|12)/(([1][9][0-9][0-9])|([2][0-9][0-9][0-9]))))");
   if (ExpReg.test(dateExp)) {
     return true;
   } else {
