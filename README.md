@@ -85,6 +85,6 @@ CARD.validateDate(dateExp);
 
 ## Contribuidoras
 
-[Carol Martínez](https://github.com/cynthia1171)
-[Cynthia Isla](https://github.com/cynthia1171)
+- [Carol Martínez](https://github.com/cynthia1171)
+- [Cynthia Isla](https://github.com/cynthia1171)
 
