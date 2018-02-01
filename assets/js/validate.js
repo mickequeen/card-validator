@@ -18,7 +18,7 @@ $(document).ready(function() {
   *valida prefijo por cada tipo de tarjeta y largo de éstass
   */
   $('#creditCard').keyup(function() {
-    var prefijo = $('#creditCard').val().charAt(0) + $('#creditCard').val().charAt(1);
+    let prefijo = $('#creditCard').val().charAt(0) + $('#creditCard').val().charAt(1);
     if (prefijo >= 51 && prefijo <= 55) {
       if ($('#creditCard').val().length === 16) {
         validCard();
@@ -48,12 +48,12 @@ $(document).ready(function() {
   *validar tarjeta
   */
   function validCard() {
-    var arr = [];
-    var creditCardNum = $('#creditCard').val();
-    var reverseCreditCard = arr.reverse();
-    var pairToSum = [];
-    var impairToSum = [];
-    var finalSum = [];
+    let arr = [];
+    let creditCardNum = $('#creditCard').val();
+    let reverseCreditCard = arr.reverse();
+    let pairToSum = [];
+    let impairToSum = [];
+    let finalSum = [];
     for (var i = 0; i < creditCardNum.length; i++) {
       arr.push(parseInt(creditCardNum[i]));
     }
