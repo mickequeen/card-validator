@@ -2,16 +2,15 @@
 
 API que valida el número de una tarjeta de crédito por medio del algoritmo de Luhn.
 
-El plugin debe recibir una referencia a un elemento del DOM que contenga <input>s con los siguientes nombres (atributo name):
+El plugin debe recibir una referencia a un elemento del DOM que contenga <input>s con los siguientes nombres (atributo id):
 
 cn (Card Number): El número de la tarjeta de crédito
 exp (Expiry Date): Fecha de expiración
 cvv (Card Verification Value): Código de validación de 3 dígitos
 name: Nombre completo como aparece en la tarjeta
-Al hacer las validaciones, la librería añade la clase .error a los <input>s que no pasen la validación, o la clase .success en caso de que sí pase.
 
 
-### Ambiente de Desarrollo
+## Ambiente de Desarrollo
 
 El ambiente de desarrollo del proyecto se formará con los siguientes componentes:
 
@@ -22,11 +21,70 @@ El ambiente de desarrollo del proyecto se formará con los siguientes componente
 - Mocha v.5.0.0
 - Chai v.4.1.2
 
-### Ejemplo
+## Instrucciones para utilizar la librería
 
-![Validador](http://drive.google.com/uc?export=view&id=1aG2n-ngG_BMFNHVnn9viVQrOC-gI8com)
+- Copie y pegue los siguientes archivos js de la librería en su html.
 
-![Tarjeta válida](http://drive.google.com/uc?export=view&id=1i7yX97wjcx0-siusTrYdGbGfDqH9KBoe)
+````
+  <script src="https://cdn.rawgit.com/cynthia1171/card-validator/megaDev/src/validateCard.js"></script>
+  <script src="https://rawgit.com/cynthia1171/card-validator/megaDev/src/validateCard.js"></script>
+  <script src="https://cdn.rawgit.com/cynthia1171/card-validator/megaDev/lib/validateCard-EC5.js"></script>
+  <script src="https://rawgit.com/cynthia1171/card-validator/megaDev/lib/validateCard-EC5.js"></script>
 
-![Tarjeta inválida](http://drive.google.com/uc?export=view&id=1mwA91zDktgfcNVeTl_sv1Ldvcscau-7a)
+````
+
+## Parámetros que debes utilizar.
+
+- Validar que el número de tajeta, cvv, fecha de expiración ó nombre de titular no estén vacíos o tengan tipos de datos distintos a los requeridos. Por ejemplo, que el número de tarjeta contenga letras.
+
+````
+// true or false
+CARD.validateData(numCard); 
+CARD.validateCvv(cvv);
+CARD.validTypeDataDate(dateExp);
+CARD.validateName(name);
+````
+
+
+### Para número de tarjeta
+
+- Validar la cantidad de dígitos de la tarjeta. visa: 13 ó 16, mastercard: 16, american express: 15.
+
+````
+CARD.validateLength(numCard); //dependiendo de la cantidad de dígitos que contenga la tarjeta, retornará: visa, mastercard ó amex. 
+````
+
+- Validar que el número de la tarjeta con algoritmo de Luhn.
+
+````
+// true or false
+CARD.validLuhn(numCard);
+````
+
+### Para cvv
+
+- Validar que la cantidad de números en el cvv sea correcto dependiendo de la tarjeta, visa y mastercard: 3, amex: 4.
+
+````
+// retorna el nombre de la tarjeta
+CARD.LengthCvv(cvv);
+````
+
+### Para fecha de expiración
+
+- Valida si la fecha ingresada (mm/aaaa) es igual ó superior a la actual.
+
+````
+// true or false
+CARD.validateDate(dateExp);
+````
+
+## Ejemplo funcional
+
+[entra al demo](https://cynthia1171.github.io/demo/)
+
+## Contribuidoras
+
+[Carol Martínez](https://github.com/cynthia1171)
+[Cynthia Isla](https://github.com/cynthia1171)
 
