@@ -4,10 +4,10 @@ API que valida el número de una tarjeta de crédito por medio del algoritmo de 
 
 El plugin debe recibir una referencia a un elemento del DOM que contenga <input>s con los siguientes nombres (atributo id):
 
-cn (Card Number): El número de la tarjeta de crédito
-exp (Expiry Date): Fecha de expiración
-cvv (Card Verification Value): Código de validación de 3 dígitos
-name: Nombre completo como aparece en la tarjeta
+- cn (Card Number): El número de la tarjeta de crédito
+- exp (Expiry Date): Fecha de expiración
+- cvv (Card Verification Value): Código de validación de 3 dígitos
+- name: Nombre completo como aparece en la tarjeta
 
 
 ## Ambiente de Desarrollo
@@ -81,7 +81,7 @@ CARD.validateDate(dateExp);
 
 ## Ejemplo funcional
 
-[entra al demo](https://cynthia1171.github.io/demo/)
+[Entra al demo](https://cynthia1171.github.io/demo/)
 
 ## Contribuidoras
 
