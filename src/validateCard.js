@@ -45,11 +45,11 @@ CARD.validTypeCard = (numCard) => {
 CARD.validLuhn = (numcard) => {
   let arrSum = [];
   let suma = 0;
-  let cont = 1;
+  let cont = 0;
   let arrCard = [...numcard];
   let arrCardReverse = arrCard.reverse();
   for (numbers of arrCardReverse) {
-    if (cont % 2 === 0) {
+    if (cont % 2 !== 0) {
       arrSum.push(numbers * 2);
     } else {
       arrSum.push(numbers);
@@ -112,7 +112,7 @@ CARD.validateDate = (dateExp) => {
   let yyyy = hoy.getFullYear();
   if (mm < 10) {
     mm = '0' + mm;
-  } 
+  }
   hoy = mm + '/' + yyyy;
   if (dateExp >= hoy) {
     return true;

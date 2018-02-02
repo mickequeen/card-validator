@@ -2,7 +2,7 @@
 
 API que valida el número de una tarjeta de crédito por medio del algoritmo de Luhn.
 
-El plugin debe recibir una referencia a un elemento del DOM que contenga <input>s con los siguientes nombres (atributo id):
+El plugin debe recibir una referencia a un elemento del DOM que contenga la etiqueta <input> con los siguientes nombres (atributo id):
 
 - cn (Card Number): El número de la tarjeta de crédito
 - exp (Expiry Date): Fecha de expiración
@@ -15,7 +15,7 @@ El plugin debe recibir una referencia a un elemento del DOM que contenga <input>
 El ambiente de desarrollo del proyecto se formará con los siguientes componentes:
 
 - Babel v.6.26.0
-- Eslint 
+- Eslint
 - Materialize-css
 - NPM
 - Mocha v.5.0.0
@@ -33,13 +33,13 @@ El ambiente de desarrollo del proyecto se formará con los siguientes componente
 
 ````
 
-## Parámetros que debes utilizar.
+## Parámetros que debe utilizar.
 
 - Validar que el número de tajeta, cvv, fecha de expiración ó nombre de titular no estén vacíos o tengan tipos de datos distintos a los requeridos. Por ejemplo, que el número de tarjeta contenga letras.
 
 ````
 // true or false
-CARD.validateData(numCard); 
+CARD.validateData(numCard);
 CARD.validateCvv(cvv);
 CARD.validTypeDataDate(dateExp);
 CARD.validateName(name);
@@ -51,7 +51,7 @@ CARD.validateName(name);
 - Validar la cantidad de dígitos de la tarjeta. visa: 13 ó 16, mastercard: 16, american express: 15.
 
 ````
-CARD.validateLength(numCard); //dependiendo de la cantidad de dígitos que contenga la tarjeta, retornará: visa, mastercard ó amex. 
+CARD.validateLength(numCard); //dependiendo de la cantidad de dígitos que contenga la tarjeta, retornará: visa, mastercard ó amex.
 ````
 
 - Validar que el número de la tarjeta con algoritmo de Luhn.
